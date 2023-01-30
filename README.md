@@ -1,2 +1,0 @@
-# TangramGame
-Copy mobile Game
