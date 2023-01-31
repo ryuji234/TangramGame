@@ -104,5 +104,18 @@ public static partial class GF
     {
         obj_.transform.localPosition = obj_.transform.localPosition + new Vector3(x, y, z);
     }
+
+    public static RectTransform GetRect(this GameObject obj_)
+    {
+        return obj_.GetComponent<RectTransform>();
+    }
+    public static void AddAnchoredPos(this GameObject obj_, Vector2 poistion2D)
+    {
+        obj_.GetRect().anchoredPosition += poistion2D;
+    }       // AddAnchoredPos()
+    public static void AddAnchoredPos(this GameObject obj_, float x, float y)
+    {
+        obj_.GetRect().anchoredPosition += new Vector2(x,y);
+    }
 }
 
